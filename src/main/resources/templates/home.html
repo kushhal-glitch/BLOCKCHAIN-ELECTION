@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+    
+.bg {
+  /* The image used */
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hawa_Mahal_Final_1.jpg/405px-Hawa_Mahal_Final_1.jpg);
+  filter: blur(11px);
+  -webkit-filter: blur(11px);
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btns{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  text-align: center;
+}
+button {
+  background-color: white;
+  color: black;
+  padding: 15px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  opacity: 1;
+  width: 30%
+}
+</style>
+</head>
+<body>
+<div class="bg">
+</div>
+<div class="btns">
+<h2>WELCOME TO VOTING PORTAL</h2>
+<br>
+<br>
+<form action="#" th:action="@{/dosignup}" method="get">
+	<center>
+	<button type="submit"><b>SIGN UP</b></button>
+	</center>
+	<br><br>
+</form>
+<form action="#" th:action="@{/dologin}" method="get">
+	<center>
+	<button type="submit"><b>LOGIN</b></button>
+	</center>
+</form>
+</div>
+</body>
+</html>

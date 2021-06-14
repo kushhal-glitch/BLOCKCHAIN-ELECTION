@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Learn More</title>
+<style>
+	.heading{
+	background-color: #0000ff;
+  color: white;
+  padding: 12px;
+	}	
+.demo-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.demo-bg {
+  filter: blur(7px);
+  -webkit-filter: blur(7px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.demo-content {
+  position: relative;
+  color: white;
+}
+marquee{
+font-size:20px;
+}
+    
+button {
+  background-color: #0000ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+}    
+</style>
+</head>
+<body style="background-color:powderblue;">
+<div class="heading">
+	<center><b><h3>A MESSAGE TO ALL VOTERS FROM THE ELECTION COMMISSION</h3></b></center>
+</div>
+
+<div class="demo-wrap">
+	<img class="demo-bg" src="https://www.newsbharati.com/Encyc/2018/2/15/2_02_11_10_nagaland-baptist_1_H@@IGHT_525_W@@IDTH_700.jpg" alt="" >    
+<div class="demo-content">
+	<b> <marquee width="80%" direction="up" height="80%" scrollamount="5">
+	<p>Standing in the queue and waiting for your turn to cast vote is a part of a history now.</p>
+	<p>Election Commission of India proposes a new system of voting where everything is transparent and no question of tampering the voting machine as it doesn't exists in first place.</p>
+	<p>BlockVote is the upcoming way of casting vote where all the votes will be stored in the Blockchain, which makes the system tamper proof and fully transparent.</p>
+	<p>This is still under various trials! Please expect a few bugs.</p>
+	
+	<p>HOW TO USE?</p>
+	<p>1. Make sure that the Ethereum Account privatekey and QR key as been displayed which you've been assigned through GMAIL account.</p>
+	<p>2. Visit the Cast Vote Page and cast your vote</p>
+	
+	<p>Regards,</p>
+	<p>Election Commission of India</p>
+	</marquee></b>
+</div>
+</div>
+<center>
+<form action="#" th:action="@{/doreturn}" method="post">
+	<center>
+	<button type="submit">MAIN PAGE</button>
+	</center>
+</form>
+</center>
+
+</body>
+</html>

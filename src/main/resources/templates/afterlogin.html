@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Voting Portal</title>
+<style>
+.vertical-menu {
+  background-color: #C2DFFF;
+  color: black;
+  display: block;
+  padding: 12px;
+}
+
+.vertical-menu button:hover {
+  background-color: #82CAFF;
+}
+
+.active {
+  background-color: #2554C7;
+  color: white;
+  padding: 12px;
+}
+.heading{
+  background-color: white;
+  color: black;
+}
+button {
+  background-color: #C2DFFF;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  width: 100%
+}
+.logout {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 12%;
+}
+</style>
+</head>
+<df-messenger
+  intent="WELCOME"
+  chat-title="BLOCKVOTE-BOT"
+  agent-id="e44d2848-fa33-4778-8d45-5fd8b536a791"
+  language-code="en" >
+</df-messenger>
+<body style="background-color:#1F45FC">
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+	<br>
+	<div class="heading">
+	<h1><center>WELCOME TO VOTING PORTAL</center></h1>
+	</div>
+	<br>
+	<div class="vertical-menu">
+	<div class="active">
+	<center><b>MENU</b></center>
+	</div>
+	
+<form action="#" th:action="@{/doqr}" method="post" >
+	<center>
+	<button type="submit" class="btn">QR CODE</button>
+	</center>
+</form>
+
+<form action="#" th:action="@{/dolearnmore}" method="post">
+	<center>
+	<button type="submit" class="btn">LEARN MORE</button>
+	</center>
+</form>
+
+<form action="#" th:action="@{/docandidates}" method="post">
+	<center>
+	<button type="submit" class="btn">KNOW YOUR CANDIDATES</button>
+	</center>
+</form>
+
+<form action="#" th:action="@{/doaadhar}" method="post">
+	<center>
+	<button type="submit" class="btn">CAST YOUR VOTE</button>
+	</center>
+</form>
+
+<form action="#" th:action="@{/doresult}" method="post">
+	<center>
+	<button type="submit" class="btn">CHECK ELECTION RESULT</button>
+	</center>
+</form>
+
+</div>
+
+<br><br>
+<center>
+<form action="#" th:action="@{/dohome}" method="post">
+	<button type="submit" class="logout"><b>LOGOUT</b></button>
+</form>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Success</title>
+<style>
+    button {
+  background-color: #0000ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+</head>
+<body style=" background:powderblue;">
+	<br>
+    <br>
+    <br>
+    <center> <i class="far fa-check-circle fa-10x" ></i></center>
+    <center><h1>YOU HAVE SUCCESSFULLY REGISTERED!</h1></center>
+    
+<br><br>
+<br><br>
+<center>
+<form action="#" th:action="@{/dologin}" method="post">
+<center>
+<button type="submit">LOGIN</button>
+</center>
+</form>
+</center>
+
+</body>
+</html>

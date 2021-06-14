@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Cast your vote</title>
+<style>
+.candi {
+  font-size: 25px;
+}
+html {
+  box-sizing: border-box;
+  
+ 
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+    .heading{
+        width: =100%;
+    }
+    .row {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.column {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+    img{
+        float: left;
+  width: 33.3%;
+  height: 170px;
+  margin-bottom: 16px;
+  margin-top: 10px;
+  padding: 0 8px;
+    }
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+      
+  }
+}
+
+.card {
+  margin: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: blue;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+a {
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+  width: 100%;
+}
+
+a:hover {
+  background-color: #0000ff;
+}
+</style>
+</head>
+<body style="background-color:powderblue;">
+<br><br>
+<div class="heading" style="color:Red;">
+    <center><h1><u>CAST YOUR VOTE</u></h1></center>
+    </div>
+<form name="castvote" th:action="@{/dosuccess}" method="post">
+<div class="column">
+    <div class="card">
+      <img src="https://media.vanityfair.com/photos/5a1c7f8c7eee1d789d984783/1:1/w_1333,h_1333,c_limit/marvel-iron-man-lede.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <center><h2>IRON MAN</h2></center>
+        <p class="title">Click on the button below to cast your vote</p>
+      </div>
+    </div>
+</div>
+<div class="column">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Chris_Hemsworth_as_Thor.jpg/220px-Chris_Hemsworth_as_Thor.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <center><h2>THOR</h2></center>
+        <p class="title">Click on the button below to cast your vote</p>
+      </div>
+    </div>
+</div>
+<div class="column">
+    <div class="card">
+      <img src="https://i.cdn.newsbytesapp.com/images/l110_11991580378536.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <center><h2>HULK</h2></center>
+        <p class="title">Click on the button below to cast your vote</p>
+      </div>
+    </div>
+</div>
+<div class="column">
+    <div class="card">
+      <img src="https://www.gamespot.com/a/uploads/scale_landscape/1578/15789737/3642776-tomholland.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <center><h2>SPIDER-MAN</h2></center>
+        <p class="title">Click on the button below to cast your vote</p>
+      </div>
+    </div>
+</div>
+<div class="column">
+    <div class="card">
+      <img src="https://filmdaily.co/wp-content/uploads/2020/02/loki-1-cast.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <center><h2>LOKI</h2></center>
+        <p class="title">Click on the button below to cast your vote</p>
+      </div>
+    </div>
+</div>
+<div class="candi" th:each="candidate : ${candidates}">
+<div class="row">
+        <p><center><a th:href="@{/dosuccess(id=${candidate.id})}" th:text="${candidate.name}"></a></center></p>
+</div>
+</div>
+</form>
+</body>
+</html>

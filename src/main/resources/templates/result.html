@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Election Result</title>
+<style>
+.candi {
+  font-size: 25px;
+}
+    button {
+  background-color: #0000ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body style=" background:lightblue;">
+<div>
+<br><br>
+	<center style="color:Red;">
+	<h2><u>ELECTION RESULTS</u></h2></center>
+	<center>
+</div>
+<div class="candi" th:each="candidate : ${candidates}">
+<center>
+<br>RESULT FOR 
+<b th:text="${candidate.name}" ></b>
+ : <b th:text="${candidate.numberofvotes}" ></b>
+</center>
+</div>
+<br>
+<center>
+<form action="#" th:action="@{/doreturn}" method="post">
+<center>
+<button type="submit">MAIN PAGE</button>
+</center>
+</form>
+</center>
+</body>
+</html>
